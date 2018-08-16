@@ -1,26 +1,2362 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
   <head>
-    <title>NodeJS Starter Application</title>
+
     <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Account Name | IBM </title>
+    <link href="css/owl.carousel.min.css" rel="stylesheet">
+    <script type="text/javascript" src="js/owl.carousel.min.js"></script>
+    <!-- Bootstrap core CSS -->
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+     
+    <!--Photo Slider-->
+    <!-- <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css"> -->
+    <!-- Custom fonts for this template -->
+    <link href="vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Merriweather:400,300,300italic,400italic,700,700italic,900,900italic' rel='stylesheet' type='text/css'>
+
+     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="stylesheets/style.css">
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <link href="css/owl.carousel.min.css" rel="stylesheet">
+    <script type="text/javascript" src="js/owl.carousel.min.js"></script>
+   
+    <!-- Plugin CSS -->
+    <link href="vendor/magnific-popup/magnific-popup.css" rel="stylesheet">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <!-- Custom styles for this template -->
+    <link href="css/creative.min.css" rel="stylesheet">
+<!--
+<script>
+         var url=window.location.href;
+        var encodedUrl = encodeURIComponent(url);
+		var stateObj = { foo: "bar" };
+   		history.pushState(stateObj, "page 2", encodedUrl);	   
+	 </script>
+   -->
+   <!--Loading YouTube APIs-->
+   <script src="https://www.youtube.com/iframe_api"></script>
+   
+ <script>
+ $("document").ready(function() {
+var video = document.getElementById("myVideo");
+var btn = document.getElementById("myBtn");
+$("#myBtn").click(function(){
+	  if (video.paused) {
+		    video.play();
+		    btn.innerHTML = "Pause";
+		  } else {
+		    video.pause();
+		    btn.innerHTML = "Play";
+		  }
+}); 
+document.getElementById('myVideo').addEventListener('ended',myHandler,false);
+ function myHandler(e) {
+
+	video.play();
+} 
+ /* window.onscroll = autoplay;  */
+ });
+ 
+
+</script>  
+
+   <script>
+      
+      // This function creates an <iframe> (and YouTube player)
+      // after the API code downloads.
+      var player;
+      function onYouTubeIframeAPIReady() {
+        player = new YT.Player('player', {
+          height: '100%',
+          width: '100%',
+          videoId: 'tdhpYQCWnCw',
+          events: {
+            'onReady': onPlayerReady
+          }
+        });
+      }
+
+      // The API will call this function when the video player is ready.
+      function onPlayerReady(event) {
+        //event.target.playVideo();
+      }
+
+      function stopVideo() {
+        player.stopVideo();
+      }
+      function gotoExtremeTop() {
+    document.body.scrollTop = 0; // For Safari
+    document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+}
+
+    </script>
+
+<!-- <script>
+    $(document).ready(function() {
+        function disableBack() { window.history.forward() }
+
+        window.onload = disableBack();
+        window.onpageshow = function(evt) { if (evt.persisted) disableBack() }
+    });
+</script>  -->
+
+<!-- <script>
+
+history.pushState(null, null, location.href);
+window.onpopstate = function () {
+    history.go(1);
+};
+</script> -->
+   
+	 <script type="text/javascript">
+/* 	 $("document").ready(function() {
+		 
+		 function getParameterByName(name, url) {
+			 
+			    if (!url) url = decodeURIComponent(window.location.href);
+			    name = name.replace(/[\[\]]/g, "\\$&");
+			    var regex = new RegExp("[?&]" + name + "(=([^&#]*)|&|#|$)"),
+			        results = regex.exec(url);
+			  
+			    if (!results) return null;
+			    if (!results[2]) return '';
+			    return decodeURIComponent(results[2].replace(/\+/g, " "));
+			}
+			var ID = getParameterByName('param'); 
+			
+			if(ID != 'Y'){
+				window.location = "index.html";
+			}
+		}); */
+
+	 	function openPreview(){
+	      window.open('preview.html','Preview','directories=no,titlebar=no,toolbar=no,location=no,status=no,menubar=no,scrollbars=no,resizable=no,width=1400,height=400');
+	    } 
+  
+  //when user press ESC, model window should be closed:
+    function ESCclose(evt,divNameToClose) {
+    var modal2 = document.getElementById('myModal');
+    // Get the button that opens the modal
+    var btn2 = document.getElementById(divNameToClose);
+    // Get the <span> element that closes the modal
+    var span2 = document.getElementsByClassName("close2")[0];
+
+      if (evt.keyCode == 27) 
+      // When the user clicks the button, open the modal 
+      //var vdo2=document.getElementById("resVideo");
+      btn2.onclick = function() {
+        modal2.style.display = "block";
+      }
+      // When the user clicks on <span> (x), close the modal
+      span2.onclick = function() {
+      modal2.style.display = "none";
+    }
+      }
+
+
+
+      function closeDivWindow(element)
+      {
+        
+        var iframe = element.querySelector( 'iframe');
+        var video = element.querySelector( 'video' );
+        if ( iframe !== null ) {
+        var iframeSrc = iframe.src;
+        iframe.src = iframeSrc;
+        }
+        if ( video !== null ) {
+        video.pause();
+        }
+      }
+
+//Find out more function
+function openFindOutMoreDialog()
+{
+    var modal21 = document.getElementById("myModal21");
+    // Get the button that opens the modal
+    var btn21 = document.getElementById("FindOutMore");
+    // Get the <span> element that closes the modal
+    var span21 = document.getElementsByClassName("close21")[0];
+    // When the user clicks the button, open the modal 
+    //var vdo2=document.getElementById("resVideo");
+    btn21.onclick = function() {
+        modal21.style.display = "block";
+    }
+    // When the user clicks on <span> (x), close the modal
+    span21.onclick = function() {
+        modal21.style.display = "none";
+        //vdo.pause;
+    }
+
+}
+
+
+function openFMDialog()
+      {
+        var modal2 = document.getElementById('myModal2');
+    // Get the button that opens the modal
+    var btn2 = document.getElementById("FMpoint");
+    // Get the <span> element that closes the modal
+    var span2 = document.getElementsByClassName("close")[0];
+    // When the user clicks the button, open the modal 
+    //var vdo2=document.getElementById("resVideo");
+    btn2.onclick = function() {
+        modal2.style.display = "block";
+    }
+    // When the user clicks on <span> (x), close the modal
+    span2.onclick = function() {
+        modal2.style.display = "none";
+        //vdo.pause;
+    }
+
+      }
+      
+      function openFutureTechDialog()
+      {
+        var modal3 = document.getElementById('myModal3');
+    // Get the button that opens the modal
+    var btn3 = document.getElementById("FutureTech");
+    // Get the <span> element that closes the modal
+    var span3 = document.getElementsByClassName("close3")[0];
+    // When the user clicks the button, open the modal 
+    //var vdo2=document.getElementById("resVideo");
+    btn3.onclick = function() {
+        modal3.style.display = "block";
+    }
+    // When the user clicks on <span> (x), close the modal
+    span3.onclick = function() {
+        modal3.style.display = "none";
+        //vdo.pause;
+    }
+
+      }
+      
+      
+//openMaximoDialog
+function openMaximoDialog()
+      {
+        var modal4 = document.getElementById('myModal4');
+    // Get the button that opens the modal
+    var btn4 = document.getElementById("Maximo");
+    // Get the <span> element that closes the modal
+    var span4 = document.getElementsByClassName("close4")[0];
+    // When the user clicks the button, open the modal 
+    //var vdo2=document.getElementById("resVideo");
+    btn4.onclick = function() {
+        modal4.style.display = "block";
+    }
+    // When the user clicks on <span> (x), close the modal
+    span4.onclick = function() {
+        modal4.style.display = "none";
+        //vdo.pause;
+    }
+
+      }
+//Cognitive
+function openIBMWood()
+{
+  var modal5 = document.getElementById('myModal5');
+       // Get the button that opens the modal
+       var btn5 = document.getElementById("Cognitive");
+       // Get the <span> element that closes the modal
+       var span5 = document.getElementsByClassName("close5")[0];
+       // When the user clicks the button, open the modal 
+       //var vdo2=document.getElementById("resVideo");
+       btn5.onclick = function() {
+           modal5.style.display = "block";
+       }
+       // When the user clicks on <span> (x), close the modal
+       span5.onclick = function() {
+           modal5.style.display = "none";
+           //vdo.pause;
+       }
+}
+//openVMWareRelationship
+function openVMWareRelationship()
+{
+ var modal6 = document.getElementById('myModal6');
+       // Get the button that opens the modal
+      var btn6 = document.getElementById("VMWare");
+       // Get the <span> element that closes the modal
+       var span6 = document.getElementsByClassName("close6")[0];
+       // When the user clicks the button, open the modal 
+       //var vdo2=document.getElementById("resVideo");
+       btn6.onclick = function() {
+           modal6.style.display = "block";
+       }
+       // When the user clicks on <span> (x), close the modal
+       span6.onclick = function() {
+           modal6.style.display = "none";
+           //vdo.pause;
+       }
+}
+//Connected FM
+function openConnectedFM()
+{
+  var modal7 = document.getElementById('myModal7');
+       // Get the button that opens the modal
+       var btn7 = document.getElementById("ConnectedFM");
+       // Get the <span> element that closes the modal
+       var span7 = document.getElementsByClassName("close7")[0];
+       // When the user clicks the button, open the modal 
+       //var vdo2=document.getElementById("resVideo");
+       btn7.onclick = function() {
+           modal7.style.display = "block";
+       }
+       // When the user clicks on <span> (x), close the modal
+       span7.onclick = function() {
+           modal7.style.display = "none";
+           //vdo.pause;
+       }
+
+}
+
+
+
+//openETDialog
+function openETDialog(){
+  window.open('https://emerging-technology.co.uk/', '_blank');
+}
+	 </script>
+
+  <script>
+  $(function() {
+    $(".video").click(function () {
+      var theModal = $(this).data("target"),
+      videoSRC = $(this).attr("data-video"),
+      videoSRCauto = videoSRC + "?modestbranding=1&rel=0&controls=0&showinfo=0&html5=1&autoplay=1";
+      $(theModal + ' iframe').attr('src', videoSRCauto);
+      $(theModal + ' button.close').click(function () {
+        $(theModal + ' iframe').attr('src', videoSRC);
+      });
+    });
+  });
+  </script>
+  <style>
+  /* override position and transform in 3.3.x */
+.carousel-inner .item.left.active {
+  transform: translateX(-33%);
+}
+.carousel-inner .item.right.active {
+  transform: translateX(33%);
+}
+
+.carousel-inner .item.next {
+  transform: translateX(33%)
+}
+.carousel-inner .item.prev {
+  transform: translateX(-33%)
+}
+
+.carousel-inner .item.right,
+.carousel-inner .item.left { 
+  transform: translateX(0);
+}
+
+
+.carousel-control.left,.carousel-control.right {background-image:none;}
+  </style>
+<style>
+
+  /* *{ border: 1px solid red; } */
+  
+  hlink:hover {
+    background-color: #5F2066;
+}
+	.name{
+	font-family: IBMPlexSans-Bold,Arial;
+	font-size: 20px;
+	}
+
+	.details1{
+	font-family: IBMPlexSans,Arial;
+	font-size: 16px;
+	}
+	.details2{
+	font-family: IBMPlexSans,Arial;
+	font-size: 14px;
+	}
+
+	.anchor:before { 
+		display: block; 
+	 	content: " "; 
+	/*   	height: 95px;
+	    margin-top: -95px; */
+	    height: 65px;
+	    margin-top: -65px;  	
+	    visibility: hidden; 
+	 }
+   .connect{
+	/*font-family: IBMPlexSans,Arial;
+	font-family: 'Raleway', sans-serif;*/
+	font-family: 'Helvetica', sans-serif;
+	/*font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;*/ 
+	font-size: 14px;
+	}
+</style>
+
+<style>
+.masthead .container{
+left:0;
+right:0;
+top:-10px;
+}
+.masthead .container .row{
+margin-top:-10px;
+}
+#myVideo {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    min-width: 100%; 
+    min-height: 100%;
+}
+.video-text{
+    position: absolute;
+    bottom: 0;
+    /* background: rgba(0, 0, 0, 0.5); */
+    color: #f1f1f1;
+    width: 100%;
+    padding: 20px;
+}
+#myBtn {
+    /* width: 200px; */
+    font-size: 14px;
+    padding: 10px;
+    border: none;
+    background-color: #0083a9;
+    color: #fff;
+    cursor: pointer;
+    float:left;
+    margin-top:300px;
+    border: medium none;
+    border-radius: 200px;
+    font-family: "Open Sans","Helvetica Neue",Arial,sans-serif;
+    font-weight: 700;
+    text-transform: uppercase;
+    margin-left: -50%;
+}
+
+#myBtn:hover {
+    background: #c79e12;
+    color: white;
+}
+  .scrollup{
+    width: 45px;
+    height: 45px;
+    text-align: center;
+    line-height: 45px;
+    color: #ffffff;
+    font-size: 30px;
+    background: #C79E12;
+    /*position: relative;*/ 
+    bottom:65px;
+    left: 50%;
+    margin-left: -32px;
+    z-index: 99999;
+    font-weight: normal;
+    border-radius: 100%;
+    transition: all 500ms .2s;
+    cursor: pointer;
+    box-shadow:2px 2px 5px 0 rgba(55,50,40, .20);
+    -webkit-box-shadow:2px 2px 5px 0 rgba(55,50,40, .20);
+    -moz-box-shadow:2px 2px 5px 0 rgba(55,50,40, .20);
+    -o-box-shadow:2px 2px 5px 0 rgba(55,50,40, .20);
+    -ms-box-shadow:2px 2px 5px 0 rgba(55,50,40, .20);
+}
+    /* body {font-family: Arial, Helvetica, sans-serif;} */
+    /* The Modal (background) */
+    .modal,.modal2,.modal3,.modal4,.modal5,.modal6,.modal7,.modal20,.modal21,.modal30,.modal29,.modal28,.modal27,.modal26,.modal25,.modal24, .modal31, .modal32, .modal33, .modal34 {
+        display: none; /* Hidden by default */
+        position: fixed; /* Stay in place */
+        z-index: 1; /* Sit on top */
+        padding-top: 60px; /* Location of the box */
+        left: 0;
+        top: 0;
+        width: 100%; /* Full width */
+        height: 100%; /* Full height */
+        overflow: auto; /* Enable scroll if needed */
+        background-color: rgb(0,0,0); /* Fallback color */
+        background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+        color:white;
+
+    }
+  
+    
+    /* Modal Content */
+    .modal-content {
+        background-color: #0083a9;
+        margin: auto;
+        border: 0px solid white;
+        width: 100%;
+        height: 100%;
+        font-family:IBM Plex Sans Text, Arial, sans-serif;
+        color:white;
+    }
+    
+    .modal-content2,.modal-content3,.modal-content4,.modal-content5,.modal-content6,.modal-content7,.modal-content20,.modal-content21,.modal-content30,.modal-content29,.modal-content28,.modal-content27,.modal-content26,.modal-content25,.modal-content24,.modal-content31,.modal-content32,.modal-content33,.modal-content34 {
+        background-color: #0083a9;
+        margin: auto;
+        /*padding: 10px;*/
+        border: 5px solid #0083A9;
+        width: 95%;
+        height: 95%;
+        font-family:IBM Plex Sans Text, Arial, sans-serif;
+        color:white;
+    }
+    
+    #videobcg { 
+     position: absolute;
+     top: 0px;
+     left: 0px;
+     min-width: 100%;
+     min-height: 100%;
+     width: auto;
+     height: auto;
+     z-index: -1000;
+     overflow: hidden;
+}
+    
+    
+    
+    /* The Close Button */
+    .close,.close2,.close3,.close4,.close5,.close6,.close7,.close20,.close21,.close30,.close29,.close28,.close27,.close26,.close25,.close24,.close31, .close32,.close33,.close34 {
+        color: white;
+        float: right;
+        font-size: 21px;
+        font-weight: bold;
+        cursor: pointer;
+    }
+    .balnkplace{
+      color: #0083a9;
+        float: right;
+        font-size: 21px;
+        font-weight: bold;
+    }
+      
+    .close:hover,
+    .close:focus,
+    .close2:hover,
+    .close2:focus,
+    .close3:hover,
+    .close3:focus,
+    .close4:hover,
+    .close4:focus,
+    .close5:hover,
+    .close5:focus,
+    .close29:hover,
+    .close29:focus,
+    .close28:hover,
+    .close28:focus,
+    .close30:hover,
+    .close30:focus,
+    .close27:hover,
+    .close27:focus,
+    .close26:hover,
+    .close26:focus,
+    .close25:hover,
+    .close25:focus,
+    .close24:hover,
+    .close24:focus,
+    .close31:hover,
+    .close31:focus,
+    .close32:hover,
+    .close32:focus,
+    .close33:hover,
+    .close33:focus,
+    .close34:hover,
+    .close34:focus,
+
+    
+
+    {
+        color: #C79E12;
+        text-decoration: none;
+        cursor: pointer;
+    }
+  
+  
+    table.ratio{
+      width: 50%;
+      
+    }
+    p.topmgn {
+      margin-top: 30px;
+  }
+  .pointer {cursor: pointer;}
+  .vl {
+              border-left: 6px solid white;
+              height: 100px;
+          }
+          .hl {
+              border-left: 6px solid white;
+              width: 600px;
+              
+          }
+          hr {
+      display: block;
+      margin-top: 0.5em;
+      margin-bottom: 0.5em;
+      margin-left: 0em;
+      margin-right: auto;
+      border-style: inset;
+      border-width: 2px;
+      width:200px;
+          }
+  
+    </style>
+  
   </head>
 
-  <body>
-    <table>
-      <tr>
-        <td style= "width:30%;">
-          <img class = "newappIcon" src="images/newapp-icon.png">
-        </td>
-        <td>
-          <h1 id="message">Hello World!</h1>
-          <p class='description'></p> Thanks for creating a <span class = "blue">NodeJS Starter Application</span>.
-        </td>
-      </tr>
-    </table>
-  </body>
+  <body id="page-top" style="overflow-x: hidden;height: auto;" >
 
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
+      <div class="container" onclick="gotoExtremeTop()">
+        <a class="navbar-brand js-scroll-trigger" style="cursor:pointer;" >AccountName | IBM </a>
+       
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+          <ul class="navbar-nav ml-auto">
+             <li class="nav-item">
+              <a class="nav-link js-scroll-trigger" href="#about">Our Relationship</a>
+            </li> 
+             <li class="nav-item">
+              <a class="nav-link js-scroll-trigger" href="#YourImperatives">Your Imperatives</a>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link js-scroll-trigger" href="#engagementopportunities">Engagement Opportunities</a>
+            </li>
+            
+            <li class="nav-item">
+              <a class="nav-link js-scroll-trigger" href="#Offerings">Offerings</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link js-scroll-trigger" href="#WhyIBM">Why IBM</a>
+            </li>
+                      
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <header class="masthead text-center text-white d-flex">
+    <video autoplay loop id="myVideo">
+  <source src="images/backgroundimage.jpg" type="video/mp4">
+  Your browser does not support HTML5 video.
+</video>
+      <div class="container my-auto video-text">
+        <div class="row">
+          <div class="col-lg-10 mx-auto">
+            <h1 class="text-uppercase">
+            <br><br><br>
+              <strong>Welcome to the IBM Roadshow</strong>
+                          </h1>
+                          <h1> <i>AccountName</i> Microsite </h1> 
+            <br>
+                        <h2 > Sample Text Sample Text Sample Text Sample Text Sample Text Sample Text            </h2>
+                        <br><br><br>
+
+            <!--<hr class="my-4">-->
+          </div>
+          <div class="col-lg-8 mx-auto">
+ <!--            <pre class="text-faded mb-5" style="text-align:left">
+            
+
+       <h5> 	    - Understand who Seadrill are and context of industry value chain
+            - Younger, Smarter and Stronger
+            - Seadrill Customer Delivery
+            - You need following IT capabilities to deliver on these
+            - "Agility" and Secured
+            - Non-linear cost growth
+            - Business Operations focused
+            - A partner who you can trust and understands you
+            - A partner who provides a Smooth & Secure Transition
+            - A partner who can support your future ambitions </h5></pre>
+            <button class="btn btn-primary btn-xl js-scroll-trigger"  id="FindOutMore" onclick="openFindOutMoreDialog()" style="cursor:pointer;">Find Out More </button> 
+            
+            <br><br> -->
+            <!--  <video id="understanding_video" width="430" height="243" poster="img/understanding.png" >
+    <source style="display:none" src="img/Understanding Seadrill v4.mp4" type="video/mp4" >
+</video>  -->
+                
+<!-- <button id="myBtn" onclick="myFunction()">Pause</button>  -->
+          </div>
+<!--         <a href="#OverallApproach" class="arrow-down1 page-scroll">
+          <span class="glyphicon glyphicon-menu-down" aria-hidden="true"></span>
+        </a>
+ -->
+ <br>
+       <div class="container">
+        <div class="row">
+            <div class="scrollup" align="center" style="display:block; margin: 0 auto;z-index:inherit;">
+                <a class="scrollup js-scroll-trigger" align="center" style="display:block; margin: 0 auto;" href="#about"><i class="fa fa-angle-down" style="color:white;"></i></a>
+            </div>
+          </div>
+          </div>
+
+           
+        </div>
+      </div>
+      
+
+      
+    </header>
+        <div id="myModal3" class="modal2" align="left">
+          <!-- Modal content -->
+          
+            <div class="modal-content3" id="Ftech" align="left">
+              
+              <table border="0" style="width:100%;" height="100%">
+                <tr align="left">
+                  <td width="450px" align="left" >The Future of Technology<span class="close3">&times;</span>  </td>
+                  
+                </tr>
+                <tr valign="top" align="left" width="100%" height="100%">
+                    <td width="100%" height="100%" align="left">
+                      <embed src="shared/IBM and the Future of Technology.pdf#page=1" type="application/pdf" width="100%" height="100%">
+                    </td>
+                </tr>
+                <tr><td height="5%"></td></tr>
+              </table>
+            </div>
+          </div>
+
+
+          <div id="myModal21" class="modal21" align="left">
+            <!-- Modal content -->
+              <div class="modal-content21" id="FindOutMore" align="left">
+                
+                  <table border="0" style="width:100%;" height="100%" align="center">
+                      <tr align="center" style="width:auto;" height="auto" >
+                        
+                        <td  align="left" ><div onclick="playPauseFindOuteMore()" style="cursor: pointer;" >Find out more<span class="close21">&times;</span></div>   </td>
+                      </tr>
+                    
+                    <tr valign="top" align="left" width="100%" height="100%">
+                     <td valign="top" align="center" style="margin:0 auto;width:50%;">
+                            
+                        <video id="videoFindOut" style="display:block; margin: 0 auto;" controls poster="shared/FM PoV.GIF" width="100%" height="100%">
+                        <source src="shared/IBM Facility Management Point of View.mp4" type="video/mp4">
+                          Your browser does not support HTML5 video.
+                        </video>
+                      </td>
+                    </tr>
+                    <tr><td height="5%"></td></tr>
+                    </table>
+              </div>
+            </div>
+    
+
+          
+          
+
+          <div id="myModal4" class="modal4" align="left">
+            <!-- Modal content -->
+            
+              <div class="modal-content4" id="MaxTech" align="left">
+                
+                <table border="0" style="width:100%;" height="100%">
+                  <tr align="left">
+                    <td width="450px" align="left">Smarter Asset Lifecycle Decisions with Maximo<span class="close4">&times;</span>  </td>
+                    
+                  </tr>
+                  <tr valign="top" align="left" width="100%" height="100%">
+                      <td width="100%" height="100%"  align="left">
+                        <embed src="shared/Watson_IOT_BIM_AHI_PMO_05.06.18.pdf#page=1" type="application/pdf" width="100%" height="100%">
+                      </td>
+                  </tr>
+                  <tr><td height="5%"></td></tr>
+                </table>
+              </div>
+            </div>
+
+            <div id="myModal5" class="modal5" align="left">
+              <!-- Modal content -->
+              
+                <div class="modal-content5"  align="left">
+                  
+                  <table border="0"  style="width:100%;" height="100%">
+                    <tr align="left">
+                      <td width="450px" align="left">Wood IBM Collaboration Overview<span class="close5">&times;</span>  </td>
+                      
+                    </tr>
+                    <tr valign="top" align="left" width="100%" height="100%">
+                        <td width="100%" height="100%" align="left"><embed src="shared/Wood IBM Collaboration Overview v7.pdf#page=1" type="application/pdf" width="100%" height="100%"></td>
+                    </tr>
+                  </table>
+                </div>
+              </div>
+              
+              
+              
+            <div id="myModal28" class="modal28" align="left">
+              <!-- Modal content -->
+              
+                <div class="modal-content28"  align="left">
+                  
+                  <table border="0"  style="width:100%;" height="100%">
+                    <tr align="left">
+                      <td width="450px" align="left">Wood IBM Collaboration Overview<span class="close28">&times;</span>  </td>
+                      
+                    </tr>
+                    <tr valign="top" align="left" width="100%" height="100%">
+                        <td width="100%" height="100%" align="left"><embed src="shared/Wood IBM Collaboration Overview v7.pdf#page=1" type="application/pdf" width="100%" height="100%"></td>
+                    </tr>
+                  </table>
+                </div>
+              </div>
+
+              
+
+              <div id="myModal6" class="modal6" align="left">
+                <!-- Modal content -->
+                
+                  <div class="modal-content6"  align="left">
+                    
+                    <table border="0" style="width:100%;" height="100%">
+                      <tr align="left">
+                        <td width="450px" align="left">VM Ware Relationship<span class="close6">&times;</span>  </td>
+                        
+                      </tr>
+                      <tr valign="top" align="left" width="100%" height="100%">
+                          <td width="100%" height="100%" align="left"><embed src="shared/IBM Partnership with VMware .pdf#page=1" type="application/pdf" width="100%" height="100%"></td>
+                      </tr>
+                    </table>
+                  </div>
+                </div>
+
+              <div id="myModal29" class="modal29" align="left">
+                <!-- Modal content -->
+                
+                  <div class="modal-content29"  align="left">
+                    
+                    <table border="0" style="width:100%;" height="100%">
+                      <tr align="left">
+                        <td width="450px" align="left">VM Ware Relationship<span class="close29">&times;</span>  </td>
+                        
+                      </tr>
+                      <tr valign="top" align="left" width="100%" height="100%">
+                          <td width="100%" height="100%" align="left"><embed src="shared/IBM Partnership with VMware .pdf#page=1" type="application/pdf" width="100%" height="100%"></td>
+                      </tr>
+                    </table>
+                  </div>
+                </div>
+              <div id="myModal27" class="modal27" align="left">
+                <!-- Modal content -->
+                
+                  <div class="modal-content27"  align="left">
+                    
+                    <table border="0" style="width:100%;" height="100%">
+                      <tr align="left">
+                        <td width="450px" align="left">Service Now<span class="close27">&times;</span>  </td>
+                        
+                      </tr>
+                      <tr valign="top" align="left" width="100%" height="100%">
+                          <td width="100%" height="100%" align="left"><embed src="shared/ServiceNow.pdf#page=1" type="application/pdf" width="100%" height="100%"></td>
+                      </tr>
+                    </table>
+                  </div>
+                </div>
+              <div id="myModal26" class="modal26" align="left">
+                <!-- Modal content -->
+                
+                  <div class="modal-content26"  align="left">
+                    
+                    <table border="0" style="width:100%;" height="100%">
+                      <tr align="left">
+                        <td width="450px" align="left">IBM Brand<span class="close26">&times;</span>  </td>
+                        
+                      </tr>
+                      <tr valign="top" align="left" width="100%" height="100%">
+                          <td width="100%" height="100%" align="left"><embed src="shared/IBM Brand.pdf#page=1" type="application/pdf" width="100%" height="100%"></td>
+                      </tr>
+                    </table>
+                  </div>
+                </div>
+           <div id="myModal25" class="modal25" align="left">
+                <!-- Modal content -->
+                
+                  <div class="modal-content25"  align="left">
+                    
+                    <table border="0" style="width:100%;" height="100%">
+                      <tr align="left">
+                        <td width="450px" align="left">A Leading Oil Company<span class="close25">&times;</span>  </td>
+                        
+                      </tr>
+                      <tr valign="top" align="left" width="100%" height="100%">
+                          <td width="100%" height="100%" align="left"><embed src="shared/Leading Oil Corporation.pdf#page=1" type="application/pdf" width="100%" height="100%"></td>
+                      </tr>
+                    </table>
+                  </div>
+                </div>
+
+              <div id="myModal24" class="modal24" align="left">
+                <!-- Modal content -->
+                
+                  <div class="modal-content24"  align="left">
+                    
+                    <table border="0" style="width:100%;" height="100%">
+                      <tr align="left">
+                        <td width="450px" align="left">A Multinational Energy Services Company<span class="close24">&times;</span>  </td>
+                        
+                      </tr>
+                      <tr valign="top" align="left" width="100%" height="100%">
+                          <td width="100%" height="100%" align="left"><embed src="shared/Multinational Energy Services Company.pdf#page=1" type="application/pdf" width="100%" height="100%"></td>
+                      </tr>
+                    </table>
+                  </div>
+                </div>
+             <div id="myModal31" class="modal31" align="left">
+                <!-- Modal content -->
+                
+                  <div class="modal-content31"  align="left">
+                    
+                    <table border="0" style="width:100%;" height="100%">
+                      <tr align="left">
+                        <td width="450px" align="left">WP1<span class="close31">&times;</span>  </td>
+                        
+                      </tr>
+                      <tr valign="top" align="left" width="100%" height="100%">
+                          <td width="100%" height="100%" align="left"><embed src="shared/WP1.pdf#page=1" type="application/pdf" width="100%" height="100%"></td>
+                      </tr>
+                    </table>
+                  </div>
+                </div>
+                  <div id="myModal32" class="modal32" align="left">
+                <!-- Modal content -->
+                
+                  <div class="modal-content32"  align="left">
+                    
+                    <table border="0" style="width:100%;" height="100%">
+                      <tr align="left">
+                        <td width="450px" align="left">WP2<span class="close32">&times;</span>  </td>
+                        
+                      </tr>
+                      <tr valign="top" align="left" width="100%" height="100%">
+                          <td width="100%" height="100%" align="left"><embed src="shared/WP2.pdf#page=1" type="application/pdf" width="100%" height="100%"></td>
+                      </tr>
+                    </table>
+                  </div>
+                </div>  
+              <div id="myModal33" class="modal33" align="left">
+                <!-- Modal content -->
+                
+                  <div class="modal-content33"  align="left">
+                    
+                    <table border="0" style="width:100%;" height="100%">
+                      <tr align="left">
+                        <td width="450px" align="left">WP3<span class="close33">&times;</span>  </td>
+                        
+                      </tr>
+                      <tr valign="top" align="left" width="100%" height="100%">
+                          <td width="100%" height="100%" align="left"><embed src="shared/WP3.pdf#page=1" type="application/pdf" width="100%" height="100%"></td>
+                      </tr>
+                    </table>
+                  </div>
+                </div>  
+               <div id="myModal34" class="modal34" align="left">
+                <!-- Modal content -->
+                
+                  <div class="modal-content34"  align="left">
+                    
+                    <table border="0" style="width:100%;" height="100%">
+                      <tr align="left">
+                        <td width="450px" align="left">WP4<span class="close34">&times;</span>  </td>
+                        
+                      </tr>
+                      <tr valign="top" align="left" width="100%" height="100%">
+                          <td width="100%" height="100%" align="left"><embed src="shared/WP4.pdf#page=1" type="application/pdf" width="100%" height="100%"></td>
+                      </tr>
+                    </table>
+                  </div>
+                </div> 
+
+<!--5th Icon in Get Inspired-->
+<div id="myModal7" class="modal7" align="left">
+  <!-- Modal content -->
+  
+    <div class="modal-content7" id="ConnFM" align="left">
+      
+      <table border="0"  style="width:100%;" height="100%">
+        <tr align="left">
+          <td width="450px" align="left">Connected FM<span class="close7">&times;</span>  </td>
+          
+        </tr>
+        <tr valign="top" align="left" width="100%" height="100%">
+            <td width="100%" height="100%" align="left"><embed src="shared/ConnectedFM.pdf#page=1" type="application/pdf" width="100%" height="100%"></td>
+        </tr>
+      </table>
+    </div>
+  </div>
+<!--5th Icon is done-->
+                <section class="p-0" id="about">
+                    <br><br><br style="line-height:150px"><br>
+                   
+
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-12 text-center">
+            <h2 class="section-heading" ><b>Our Relationship</b></h2>
+            <h3 class="section-heading" ><b>Our Journey So far with You</b></h3>
+            </div>
+            
+ 
+    <!--<hr class="my-4">-->  
+    </div>
+        </div>
+      </div>
+
+
+            <br>
+   <!--   <div class="container-fluid p-0">
+        <div class="row no-gutters popup-gallery">
+         
+         <div class="col-lg-3 col-sm-6">
+         <a class="portfolio-box" href="img/portfolio/fullsize/1.png">
+
+            <div class="portfolio-box" >
+              <img class="img-fluid" src="img/portfolio/thumbnails/1.png" alt="">
+              <div class="portfolio-box-caption">
+                <div class="portfolio-box-caption-content">
+                  <div class="project-category text-faded">
+                  </div>
+                  <div class="project-name">
+                    <p style="font-family:Calibri">Tash in Finance Department</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            </a>
+          </div>
+
+		 <!-- <div class="col-lg-4 col-sm-6" onclick="openPreview()">-->
+     <!--    <div class="col-lg-3 col-sm-12" id="FMpoint"  onclick="openFMDialog()" style="cursor:pointer;" > -->
+   <!--  <div class="col-lg-3 col-sm-12">
+     	<a class="portfolio-box" href="img/portfolio/fullsize/2.png">
+            <div class="portfolio-box">
+                    <img class="img-fluid" src="img/portfolio/thumbnails/2.png" alt="">  
+                    <div class="portfolio-box-caption">
+                      <div class="portfolio-box-caption-content">
+                        <div class="xproject-category text-fadedx">
+                        </div>
+                        <div class="project-name">
+                        <p style="font-family:Calibri">Dani the Rig Worker</p>
+                          
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  </a>
+                </div> 
+      
+          
+         <!-- <div class="col-lg-3 col-sm-12" style="cursor:pointer;" onclick="openETDialog()"> -->
+        <!--  <div class="col-lg-3 col-sm-12">
+          	<a class="portfolio-box" href="img/portfolio/fullsize/3.png">
+            <div class="portfolio-box"> 
+              <img class="img-fluid" src="img/portfolio/thumbnails/3.png" alt="">
+              <div class="portfolio-box-caption">
+                <div class="portfolio-box-caption-content">
+                  <div class="project-category text-faded">
+                  </div>
+                  <div class="project-name">
+                    
+                    <p style="font-family:Calibri">Kim the IT Services Technician</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            </a>
+          </div>
+          
+         <!-- <div class="col-lg-3 col-sm-12" id="Maximo" style="cursor:pointer;" onclick="openMaximoDialog()"> -->
+       <!--  <div class="col-lg-3 col-sm-12">
+         	<a class="portfolio-box" href="img/portfolio/fullsize/4.png">
+            <div class="portfolio-box">
+              <img class="img-fluid" src="img/portfolio/thumbnails/4.png" alt="">
+              <div class="portfolio-box-caption">
+                <div class="portfolio-box-caption-content">
+                  <div class="project-category text-faded">
+                  </div>
+                  <div class="project-name">
+                    <p style="font-family:Calibri">Kaveh the CIO</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            </a>
+          </div>
+</div>
+</div> -->
+
+<div class="w3-content w3-display-container" align="middle" style="padding-top:10px"> <img src= "images/journey.png" width="70%" height="70%">
+      </div>
+
+<br><br>
+ <div class="row">
+                    
+                    
+               
+                      <div class="col-lg-12 text-center">
+                              <div class="container">
+                                  
+                        <h3 class="section-heading" ><b>Offerings & Stakeholders</b></h3>
+                        </div>
+                        
+            </div>
+            </div>
+
+          <div class="xcontainer" style="left:0px;position:relative;">
+              <div class="row" style="left:10px;">
+                <div class="col-lg-6 xcol-md-5 text-center" >
+                  <div class="service-box mt-5 mx-auto" id="IBMWP1" style="cursor:pointer;">
+                  
+                    <!--  <i class="fa fa-4x fa-diamond text-primary mb-3 sr-icons"></i> -->
+                 <!--    <a id="IbmRes" class="pointer" href="#OverallApproach"  style="color:white"> -->
+                    <img  src="icons/WP1.png" >
+                    <h5 class="mb-3">Our current offerings</h5>
+                     <p style="font-size:14px;font-family:Calibri" ><i>What are the key engagements and offerings we are already working on with the client</i></p>
+                  <!--  </a> -->
+                    <p class="text-muted mb-0"></p>
+                  </div>
+                </div>
+          
+          <div class="col-lg-6 xcol-md-5 text-center" >
+            <div class="service-box mt-5 mx-auto" id="IBMWP4" style="cursor:pointer;">
+               
+                <img src="icons/WP4.png">
+                <h5 class="mb-3">Our Key Stakeholders</h5>
+               <p style="font-size:14px;font-family:Calibri" ><i>Key Stakeholders information which you would want to show / orgchart / listing</i></p>
+              <p class="text-muted mb-0"></p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+      
+    <!--   
+      <br>
+      <div class="w3-content w3-display-container" align="middle" style="padding-top:10px"> <img src= "images/WP1.png" width="60%" height="60%">
+      </div>
+    <br>
+            <br>
+      <div class="w3-content w3-display-container" align="middle" style="padding-top:10px"> <img src= "images/WP2.png" width="60%" height="60%">
+      </div>
+    <br>
+          <br>
+      <div class="w3-content w3-display-container" align="middle" style="padding-top:10px"> <img src= "images/WP2-2.png" width="60%" height="60%">
+      </div>
+    <br>
+          <br>
+      <div class="w3-content w3-display-container" align="middle" style="padding-top:10px"> <img src= "images/WP3.png" width="60%" height="60%">
+      </div>
+    <br>
+          <br>
+      <div class="w3-content w3-display-container" align="middle" style="padding-top:10px"> <img src= "images/WP4.png" width="60%" height="60%">
+      </div>
+    <br>
+          <br>
+      <div class="w3-content w3-display-container" align="middle" style="padding-top:10px"> <img src= "images/WP4-2.png" width="60%" height="60%">
+      </div>
+    <br>  -->
+      <br><br><br>  
+
+
+        </div>
+      </div>
+      
+      
+<!-- adding from Services Section to here -->
+
+<br>
+      
+      
+      <div class="scrollup" align="center" style="display:block; margin: 0 auto;">
+          <a class="scrollup js-scroll-trigger" align="center" style="display:block; margin: 0 auto;" href="#YourImperatives"><i class="fa fa-angle-down" style="color:white;"></i></a>
+      </div>
+      <br>
+    </section>
+    
+    
+
+
+
+
+
+ <!--  Your Imperative Section Starts -->
+ 
+                 <section class="p-0" id="YourImperatives" style="background-color:rgb(0,131,169);>
+                    <br><br><br style="line-height:150px"><br><br><br>
+                   
+<br><br><br><br><br><br><br><br><br><br>
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-12 text-center">
+            <h2 class="section-heading" >Your Imperatives</h2>
+            <h3 class="section-heading" >Placeholder Text</h3>
+            </div>
+            
+ 
+    <!--<hr class="my-4">-->  
+    </div>
+        </div>
+   
+
+
+            <br>
+     <div class="container-fluid p-0">
+        <div class="row no-gutters popup-gallery">
+         
+         <div class="col-lg-4 col-sm-12">
+         <a class="portfolio-box" href="img/portfolio/fullsize/1.png">
+
+            <div class="portfolio-box" >
+              <img class="img-fluid" src="img/portfolio/thumbnails/1.png" alt="">
+              <div class="portfolio-box-caption">
+                <div class="portfolio-box-caption-content">
+                  <div class="project-category text-faded">
+                  </div>
+                  <div class="project-name">
+                    <p style="font-family:Calibri">Industry Trends</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            </a>
+          </div>
+          
+        
+
+
+     <div class="col-lg-4 col-sm-12">
+     	<a class="portfolio-box" href="img/portfolio/fullsize/2.png">
+     	
+            <div class="portfolio-box">
+                    <img class="img-fluid" src="img/portfolio/thumbnails/2.png" alt="">  
+                    <div class="portfolio-box-caption">
+                      <div class="portfolio-box-caption-content">
+                        <div class="project-category text-faded">
+                        </div>
+                        <div class="project-name">
+                        <p style="font-family:Calibri">Client's need for action</p>
+                          
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  </a>
+                </div> 
+      
+          
+         <!-- <div class="col-lg-4 col-sm-12" style="cursor:pointer;" onclick="openETDialog()"> -->
+         <div class="col-lg-4 col-sm-12">
+          	<a class="portfolio-box" href="img/portfolio/fullsize/3.png">
+            <div class="portfolio-box"> 
+              <img class="img-fluid" src="img/portfolio/thumbnails/3.png" alt="">
+              <div class="portfolio-box-caption">
+                <div class="portfolio-box-caption-content">
+                  <div class="project-category text-faded">
+                  </div>
+                  <div class="project-name">
+                    
+                    <p style="font-family:Calibri">Optional Box</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            </a>
+          </div>
+          
+
+</div>
+</div> 
+
+
+<!-- Your Imperatives End -->
+
+     
+<!-- adding from Services Section to here -->
+
+<br>
+      
+      
+      <div class="scrollup" align="center" style="display:block; margin: 0 auto;">
+          <a class="scrollup js-scroll-trigger" align="center" style="display:block; margin: 0 auto;" href="#engagementopportunities"><i class="fa fa-angle-down" style="color:white;"></i></a>
+      </div>
+      <br>
+    </section>
+ 
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+
+     <!--            <section class="p-0" id="TeamResources">
+                    <br><br><br style="line-height:150px"><br>
+                   
+
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-12 text-center">
+            <h2 class="section-heading" >Our Team</h2>
+
+		
+            
+      
+     
+    </div>
+        </div>
+      </div>
+
+          <div class="xcontainer" style="/* left:50px; */position:relative;">
+<div  style="margin-top:50px;" class="col-md-6 col-md-offset-3">
+<div class="carousel slide" id="myCarousel">
+  <div class="carousel-inner">
+    <div class="item active">
+      <div class="col-md-4"><a href="#!"><img src="images/Amanda.png" class="img-responsive"></a><p style="font-size:20px;font-family:Calibri">Amanda Borthwick </p><p style="font-size:18px;font-family:Calibri">Account Partner</p><p><a target="_blank" href="https://www.linkedin.com/in/amandaborthwick/"><button type="button" class="btn btn-primary linkedin">LinkedIn</button></a></p></div>
+    </div>
+    <div class="item">
+      <div class="col-md-4"><a href="#!"><img src="images/Andrew.png" class="img-responsive"></a><p style="font-size:20px;font-family:Calibri">Andrew Brierely</p><p style="font-size:18px;font-family:Calibri">VP Cloud Services</p><p><a target="_blank" href="https://www.linkedin.com/in/andy-brierley-9313065/"><button type="button" class="btn btn-primary linkedin">LinkedIn</button></a></p></div>
+    </div>
+    <div class="item">
+      <div class="col-md-4"><a href="#!"><img src="images/Zain.png" class="img-responsive"></a><p style="font-size:20px;font-family:Calibri">Zain Hirji</p><p style="font-size:18px;font-family:Calibri">Service Management Design</p><p><a target="_blank" href="https://www.linkedin.com/in/zainhirji/"><button type="button" class="btn btn-primary linkedin">LinkedIn</button></a></p></div>
+    </div>
+    <div class="item">
+      <div class="col-md-4"><a href="#!"><img src="images/Matt.png" class="img-responsive"></a><p style="font-size:20px;font-family:Calibri">Matt Armstrong</p><p style="font-size:18px;font-family:Calibri">IT Services Design</p><p><a target="_blank" href="https://www.linkedin.com/in/matt-armstrong-88301622/"><button type="button" class="btn btn-primary linkedin">LinkedIn</button></a></p></div>
+    </div>
+    <div class="item">
+      <div class="col-md-4"><a href="#!"><img src="images/Giles.png" class="img-responsive"></a><p style="font-size:20px;font-family:Calibri">Giles Norman</p><p style="font-size:18px;font-family:Calibri">Digital Workplace Design</p><p><a target="_blank" href="https://www.linkedin.com/in/gilesnorman/"><button type="button" class="btn btn-primary linkedin">LinkedIn</button></a></p></div>
+    </div>
+    <div class="item">
+      <div class="col-md-4"><a href="#!"><img src="images/Siobhan.png" class="img-responsive"></a><p style="font-size:20px;font-family:Calibri">Siobhan O'Sullivan</p><p style="font-size:18px;font-family:Calibri">Transition Manager</p><p><a target="_blank" href="https://www.linkedin.com/in/siobhan-o-sullivan-3682b117/"><button type="button" class="btn btn-primary linkedin">LinkedIn</button></a></p></div>
+    </div>
+    <div class="item">
+      <div class="col-md-4"><a href="#!"><img src="images/Imran.jpg" class="img-responsive"></a><p style="font-size:20px;font-family:Calibri">Imran Khan</p><p style="font-size:18px;font-family:Calibri">Local Delivery Project Executive (DPE)</p><p><a target="_blank" href="https://www.linkedin.com/in/imran-khan-a155357/"><button type="button" class="btn btn-primary linkedin">LinkedIn</button></a></p></div>
+    </div>    
+    <div class="item">
+      <div class="col-md-4"><a href="#!"><img src="images/Phalguni.png" class="img-responsive"></a><p style="font-size:20px;font-family:Calibri">Phalguni Ghatak</p><p style="font-size:18px;font-family:Calibri">Global Delivery Project Executive</p><p><a target="_blank" href="https://www.linkedin.com/in/phalguni-ghatak-03a76812/"><button type="button" class="btn btn-primary linkedin">LinkedIn</button></a></p></div>
+    </div>
+    <div class="item">
+      <div class="col-md-4"><a href="#!"><img src="images/CliffW.png" class="img-responsive"></a><p style="font-size:20px;font-family:Calibri">Cliff Wilson</p><p style="font-size:18px;font-family:Calibri">Security Design</p><p><a target="_blank" href="https://www.linkedin.com/in/cliff-wilson-403855/"><button type="button" class="btn btn-primary linkedin">LinkedIn</button></a></p></div>
+    </div>
+  </div>
+  <a class="left carousel-control" href="#myCarousel" data-slide="prev"><i class="glyphicon glyphicon-chevron-left"></i></a>
+  <a class="right carousel-control" href="#myCarousel" data-slide="next"><i class="glyphicon glyphicon-chevron-right"></i></a>
+</div>
+</div>
+      </div>
+      <br><br>    
+
+            <br>
+      
+      
+      
+
+
+<br>
+      
+      
+      <div class="scrollup" align="center" style="display:block; margin: 0 auto;">
+          <a class="scrollup js-scroll-trigger" align="center" style="display:block; margin: 0 auto;" href="#CGA"><i class="fa fa-angle-down" style="color:white;"></i></a>
+      </div>
+      <br>
+    </section> --> 
+
+
+
+   <section id="engagementopportunities" style="background-color:rgb(0,131,169);">
+      <br><br><br><br><br><br>
+
+    <div class="container">
+        <div class="row">
+          <div class="col-lg-12 text-center">
+            <h2 class="section-heading">Engagement Opportunities</h2>
+
+			<!-- <h5 class="section-heading">Secrets of Success</h5>  -->
+            
+      
+    <!--<hr class="my-4">-->  
+    </div>
+        </div>
+      </div>
+
+          <div class="xcontainer" style="left:20px;position:relative;">
+              <div class="row" style="left:10px;">
+                <div class="col-lg-4 xcol-md-5 text-center" >
+                  <div class="service-box mt-5 mx-auto" >
+                    <!--  <i class="fa fa-4x fa-diamond text-primary mb-3 sr-icons"></i> -->
+                 <!--    <a id="IbmRes" class="pointer" href="#OverallApproach"  style="color:white"> -->
+                    <img  src="icons/cost effectiveness.png" >
+                    <h5 class="mb-3"> Automation</h5>
+                  <!--  </a> -->
+                    <p class="text-muted mb-0"></p>
+                  </div>
+                </div>
+          <div class="col-lg-4 xcol-md-5 text-center" >
+            <div class="service-box mt-5 mx-auto">
+              <!-- <i class="fa fa-4x fa-paper-plane text-primary mb-3 sr-icons"></i>  -->
+                        <img src="icons/economies of scale.png">
+                <h5 class="mb-3">Digital Transformation</h5>
+          
+              
+              <p class="text-muted mb-0"></p>
+            </div>
+          </div>
+          <div class="col-lg-4 xcol-md-5 text-center" >
+            <div class="service-box mt-5 mx-auto">
+              <!-- <i class="fa fa-4x fa-paper-plane text-primary mb-3 sr-icons"></i>  -->
+                        <img src="icons/lock1.png">
+                <h5 class="mb-3">Legacy Modernization</h5>
+          
+              
+              <p class="text-muted mb-0"></p>
+            </div>
+          </div>
+          <div class="col-lg-4 xcol-md-5 text-center" >
+            <div class="service-box mt-5 mx-auto">
+              <!-- <i class="fa fa-4x fa-paper-plane text-primary mb-3 sr-icons"></i>  -->
+                        <img src="icons/piggybank.png">
+                <h5 class="mb-3">Microservices</h5>
+          
+              
+              <p class="text-muted mb-0"></p>
+            </div>
+          </div>
+          <div class="col-lg-4 xcol-md-5 text-center" >
+            <div class="service-box mt-5 mx-auto">
+              <!-- <i class="fa fa-4x fa-paper-plane text-primary mb-3 sr-icons"></i>  -->
+                        <img src="icons/leader.png">
+                <h5 class="mb-3">Cloud</h5>
+          
+              
+              <p class="text-muted mb-0"></p>
+            </div>
+          </div>
+          <div class="col-lg-4 xcol-md-5 text-center" >
+            <div class="service-box mt-5 mx-auto">
+              <!-- <i class="fa fa-4x fa-paper-plane text-primary mb-3 sr-icons"></i>  -->
+                        <img src="icons/watson.png">
+                <h5 class="mb-3">Cognitive </h5>
+                      
+              <p class="text-muted mb-0"></p>
+            </div>
+          </div>
+         
+          <div class="col-lg-4 xcol-md-5 text-center" >
+            
+            <div class="service-box mt-5 mx-auto" id="ServiceNow123" style="cursor:pointer;">   
+                <img src="icons/servicenow relaionship.png">
+                <h5 class="mb-3">Blockchain </h5>
+               
+              <p class="text-muted mb-0"></p>
+            </div>
+          </div>
+           <div class="col-lg-4 xcol-md-5 text-center"  >
+            <div class="service-box mt-5 mx-auto" id="VMWare123" style="cursor:pointer;" onclick="openVMWareRelationship()">
+              <!-- <i class="fa fa-4x fa-newspaper-o text-primary mb-3 sr-icons"></i>  -->
+           
+                  <img src="icons/VM Ware Relationship.png">
+                  <h5 class="mb-3">Analytics</h5>
+                      <p class="text-muted mb-0"></p>
+            </div>
+          </div>
+
+          <!-- <div class="col-lg-4 xcol-md-5 text-center" >
+            <div class="service-box mt-5 mx-auto" id="IBMBrand123" style="cursor:pointer;">
+               
+                <img src="icons/IBM Brand.png" class="pointer">
+                <h5 class="mb-3">IBM Brand strength</h5>
+               
+                <p class="text-muted mb-0"></p>              
+            </div>
+          </div>  -->
+          
+          
+         <div class="col-lg-4 xcol-md-5 text-center" >
+            <div class="service-box mt-5 mx-auto">
+           <!--     <a id="ConnectedFM" href="#OverallApproach" style="color:white" class="pointer"> -->
+                <img src="icons/Delivery Timeline.png" >
+                <h5 class="mb-3">SFDC</h5>
+             
+                <p class="text-muted mb-0"></p>              
+            </div>
+          </div>
+          
+            <div class="col-lg-4 xcol-md-5 text-center" >
+            <div class="service-box mt-5 mx-auto">
+           <!--     <a id="ConnectedFM" href="#OverallApproach" style="color:white" class="pointer"> -->
+                <img src="icons/Delivery Timeline.png" >
+                <h5 class="mb-3">HANA</h5>
+             
+                <p class="text-muted mb-0"></p>              
+            </div>
+          </div>
+          
+            <div class="col-lg-4 xcol-md-5 text-center" >
+            <div class="service-box mt-5 mx-auto">
+           <!--     <a id="ConnectedFM" href="#OverallApproach" style="color:white" class="pointer"> -->
+                <img src="icons/Delivery Timeline.png" >
+                <h5 class="mb-3">AMS 2.0</h5>
+             
+                <p class="text-muted mb-0"></p>              
+            </div>
+          </div>
+         
+            <div class="col-lg-4 xcol-md-5 text-center" >
+            <div class="service-box mt-5 mx-auto">
+           <!--     <a id="ConnectedFM" href="#OverallApproach" style="color:white" class="pointer"> -->
+                <img src="icons/Delivery Timeline.png" >
+                <h5 class="mb-3">Devops</h5>
+             
+                <p class="text-muted mb-0"></p>              
+            </div>
+          </div>
+          
+           <div class="col-lg-4 xcol-md-5 text-center" >
+            <div class="service-box mt-5 mx-auto">
+           <!--     <a id="ConnectedFM" href="#OverallApproach" style="color:white" class="pointer"> -->
+                <img src="icons/Delivery Timeline.png" >
+                <h5 class="mb-3">IGNITE</h5>
+             
+                <p class="text-muted mb-0"></p>              
+            </div>
+          </div>
+          
+          
+
+        </div>
+      </div>
+     <br><br>
+      <div class="container">
+        <div class="row">
+            <div class="scrollup" align="center" style="display:block; margin: 0 auto;z-index:inherit;">
+                <a class="scrollup js-scroll-trigger" align="center" style="display:block; margin: 0 auto;" href=#Offerings><i class="fa fa-angle-down" style="color:white;"></i></a>
+            </div>
+          </div>
+          </div>
+    </section>
+ 
+ 
+ 
+<!-- our offering starts here --> 
+
+
+
+   <section id="Offerings" style="background-color:rgb(244,244,244);">
+      <br><br><br><br><br><br><br><br><br><br><br><br>
+
+    <div class="container">
+        <div class="row">
+          <div class="col-lg-12 text-center">
+            <h2 class="section-heading">Our Offerings</h2>
+
+			<!-- <h5 class="section-heading">Secrets of Success</h5>  -->
+            
+      
+    <!--<hr class="my-4">-->  
+    </div>
+        </div>
+      </div>
+
+          <div class="xcontainer" style="left:20px;position:relative;">
+              <div class="row" style="left:10px;">
+                <div class="col-lg-3 xcol-md-5 text-center" >
+                  <div class="service-box mt-5 mx-auto" >
+                    <!--  <i class="fa fa-4x fa-diamond text-primary mb-3 sr-icons"></i> -->
+                 <!--    <a id="IbmRes" class="pointer" href="#OverallApproach"  style="color:white"> -->
+                    <img  src="images/Offering-1.png" >
+                    <h5 class="mb-3"> Offering 1</h5>
+                  <!--  </a> -->
+                    <p class="text-muted mb-0"></p>
+                  </div>
+                </div>
+          <div class="col-lg-3 xcol-md-5 text-center" >
+            <div class="service-box mt-5 mx-auto">
+              <!-- <i class="fa fa-4x fa-paper-plane text-primary mb-3 sr-icons"></i>  -->
+                        <img src="images/Offering-2.png">
+                <h5 class="mb-3">Offering 2</h5>
+          
+              
+              <p class="text-muted mb-0"></p>
+            </div>
+          </div>
+          <div class="col-lg-3 xcol-md-5 text-center" >
+            <div class="service-box mt-5 mx-auto">
+              <!-- <i class="fa fa-4x fa-paper-plane text-primary mb-3 sr-icons"></i>  -->
+                        <img src="images/Offering-3.png">
+                <h5 class="mb-3">Offering 3</h5>
+          
+              
+              <p class="text-muted mb-0"></p>
+            </div>
+          </div>
+          <div class="col-lg-3 xcol-md-5 text-center" >
+            <div class="service-box mt-5 mx-auto">
+              <!-- <i class="fa fa-4x fa-paper-plane text-primary mb-3 sr-icons"></i>  -->
+                        <img src="images/Offering-4.png">
+                <h5 class="mb-3">Offering 4</h5>
+          
+              
+                        
+                <p class="text-muted mb-0"></p>              
+            </div>
+          </div>
+          
+          
+
+        </div>
+      </div>
+     <br><br>
+      <div class="container">
+        <div class="row">
+            <div class="scrollup" align="center" style="display:block; margin: 0 auto;z-index:inherit;">
+                <a class="scrollup js-scroll-trigger" align="center" style="display:block; margin: 0 auto;" href="#WhyIBM"><i class="fa fa-angle-down" style="color:white;"></i></a>
+            </div>
+          </div>
+          </div>
+    </section>
+ 
+
+
+
+<!-- Our offering ends here -->
+ 
+ 
+
+
+ 
+ 
+ 
+
+
+    <section style="background-color:rgb(189,215,238);" id="WhyIBM">
+      <br><br><br><br><br><br>
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-12 mx-auto text-center" style="color:rgb(0,0,0);">
+          
+            <h2 class="section-heading" style="padding-top:10px"><b>Why IBM</b></h2>
+            <h3 class="section-heading" style="padding-top:10px"><b>References</b></h3>
+ 
+</div>
+</div>
+</div>
+    
+          <div class="xcontainer" style="left:110px;position:relative;">
+              <div class="row" style="left:10px;">
+                <div class="col-lg-2 xcol-md-5 text-center" id="IBMOil123" style="cursor:pointer;">
+                  <div class="service-box mt-5 mx-auto" >
+                    <!--  <i class="fa fa-4x fa-diamond text-primary mb-3 sr-icons"></i> -->
+
+                    <img src="icons/logo_oil.png" class="pointer">
+                  
+    
+                    <p class="text-muted mb-0"></p>
+                  </div>
+                </div>
+
+          <div class="col-lg-2 xcol-md-5 text-center" >
+            <div class="service-box mt-5 mx-auto">
+              <!-- <i class="fa fa-4x fa-newspaper-o text-primary mb-3 sr-icons"></i>  -->
+           <a href="https://www.computerweekly.com/news/2240215771/Case-study-BG-Group-turns-to-cloud-HR-to-reach-staff-in-20-countries" target="_blank" style="color:white">
+                  <img src="icons/logo_BG Group.png">
+                      <p class="text-muted mb-0"></p>
+                       </a>
+            </div>
+          </div>
+          <div class="col-lg-2 xcol-md-5 text-center" >
+            <div class="service-box mt-5 mx-auto" >
+               <a href="https://www.ibm.com/watson/stories/woodside/" target="_blank" style="color:white">
+                <img src="icons/logo_Woodside.png">
+
+               
+              <p class="text-muted mb-0"></p>
+              </a>
+            </div>
+          </div>
+
+          <div class="col-lg-2 xcol-md-5 text-center" id="IBMWood" style="cursor:pointer;" onclick="openIBMWood()" >
+            <div class="service-box mt-5 mx-auto">
+               <img  src="icons/logo_Wood.png" >
+                
+
+               
+                <p class="text-muted mb-0"></p>              
+            </div>
+          </div>
+                    <div class="col-lg-2 xcol-md-5 text-center" id="IBMEnergy123" style="cursor:pointer;">
+            <div class="service-box mt-5 mx-auto">
+              <!-- <i class="fa fa-4x fa-paper-plane text-primary mb-3 sr-icons"></i>  -->
+              
+
+                        <img src="icons/logo_energy.png">
+
+          
+              
+              <p class="text-muted mb-0"></p>
+             
+            </div>
+          </div>
+        </div>
+      </div>
+      <br><br>
+
+<div class="container">
+        <div class="row">
+          <div class="col-lg-12 mx-auto text-center" style="color:rgb(0,0,0);">
+          
+
+            <h3 class="section-heading" style="padding-top:10px"><b>Our Testimonials</b></h3>
+ 
+</div>
+</div>
+</div>
+ <div class="xcontainer" style="left:0px;position:relative;">
+              <div class="row" style="left:10px;">
+                <div class="col-lg-4 xcol-md-5 text-center" >
+                  <div class="service-box mt-5 mx-auto" id="IBMWP1" style="cursor:pointer;">
+                  
+                    <!--  <i class="fa fa-4x fa-diamond text-primary mb-3 sr-icons"></i> -->
+                 <!--    <a id="IbmRes" class="pointer" href="#OverallApproach"  style="color:white"> -->
+                    <img  src="icons/WP1.png" >
+                    <h5 class="mb-3" style="color:rgb(0,0,0);">Testimonial 1</h5>
+                     <p style="font-size:14px;font-family:Calibri;color:rgb(0,0,0);" >Bringing our best practices and AI and automation solutions from around the world in different industries to manage your IT ecosystem, so that services deliver exceptional experiences for your business.</p>
+                  <!--  </a> -->
+                    <p class="text-muted mb-0"></p>
+                  </div>
+                </div>
+          
+          <div class="col-lg-4 xcol-md-5 text-center" >
+            <div class="service-box mt-5 mx-auto" id="IBMWP4" style="cursor:pointer;">
+               
+                <img src="icons/WP4.png">
+                <h5 class="mb-3" style="color:rgb(0,0,0);">Testimonial 2</h5>
+               <p style="font-size:14px;font-family:Calibri;color:rgb(0,0,0);" >In today’s digital workplace, users are working across virtual, physical and connected environments— it’s all about user choice and seamless integration of mobile in the workplace.</p>
+              <p class="text-muted mb-0"></p>
+            </div>
+          </div>
+          
+                  <div class="col-lg-4 xcol-md-5 text-center" >
+            <div class="service-box mt-5 mx-auto" id="IBMWP4" style="cursor:pointer;">
+               
+                <img src="icons/WP4.png">
+                <h5 class="mb-3" style="color:rgb(0,0,0);">Testimonial 3</h5>
+               <p style="font-size:14px;font-family:Calibri;color:rgb(0,0,0);" >In today’s digital workplace, users are working across virtual, physical and connected environments— it’s all about user choice and seamless integration of mobile in the workplace.</p>
+              <p class="text-muted mb-0"></p>
+            </div>
+          </div>  
+          
+
+        </div>
+      </div>
+
+<br><br>
+<div class="container">
+        <div class="row">
+          <div class="col-lg-12 mx-auto text-center" style="color:rgb(0,0,0);">
+          
+
+            <h3 class="section-heading" style="padding-top:10px"><b>Our Partnerships</b></h3>
+ 
+</div>
+</div>
+</div>
+
+          <div class="xcontainer" style="/* left:50px; */position:relative;">
+<div  style="margin-top:50px;" class="col-md-6 col-md-offset-3">
+<div class="carousel slide" id="myCarousel">
+  <div class="carousel-inner">
+    <div class="item active">
+      <div class="col-md-4"><a href="#!"><img src="images/Amanda.png" class="img-responsive"></a></div>
+    </div>
+    <div class="item">
+      <div class="col-md-4"><a href="#!"><img src="images/Microsoft.png" class="img-responsive"></a></div>
+    </div>
+    <div class="item">
+      <div class="col-md-4"><a href="#!"><img src="images/SAP.png" class="img-responsive"></a></div>
+    </div>
+    <div class="item">
+      <div class="col-md-4"><a href="#!"><img src="images/Oracle.png" class="img-responsive"></a></div>
+    </div>
+
+  </div>
+  <a class="left carousel-control" href="#myCarousel" data-slide="prev"><i class="glyphicon glyphicon-chevron-left"></i></a>
+  <a class="right carousel-control" href="#myCarousel" data-slide="next"><i class="glyphicon glyphicon-chevron-right"></i></a>
+</div>
+</div>
+      </div>
+
+
+
+
+<br><br>
+
+     
+      <!--UP ball-->
+      <table border="0">
+          <tr align="center">
+            <td align="center">
+                <div class="scrollup" align="center" style="display:block; margin: 0 auto;cursor:pointer;position:inherit;" onclick="gotoExtremeTop()">
+                    <a class="scrollup js-scroll-trigger" align="center" style="display:block; margin: 0 auto;" ><i class="fa fa-angle-up" style="color:white;"></i></a>
+                </div>
+            </td>
+          </tr>
+        </table>
+        <br><br>
+    </section> 
+   <!--
+     <footer>
+      <table border="1" style="width: 100%;bottom: 0;">
+          <tr>
+          <td class="section-heading connect" style="align-content:right;height:25px;width:100%;text-align: center;font-family: Arial, Helvetica, sans-serif;font-size:14px;"  valign="top">Best viewed in Mozilla Firefox
+            </td>
+        </tr>
+        <tr>
+            <td class="section-heading connect" style="align-content:left;height:25px;width:100%;text-align: center;font-family: Arial, Helvetica, sans-serif;font-size:14px;"  valign="top">&copy; IBM and Client Confidential</td>
+        </tr>        
+      </table>
+ </footer>
+
+   -->
+   
+    <!-- Bootstrap core JavaScript -->
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Plugin JavaScript -->
+    <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+    <script src="vendor/scrollreveal/scrollreveal.min.js"></script>
+    <script src="vendor/magnific-popup/jquery.magnific-popup.min.js"></script>
+
+    <!-- Custom scripts for this template -->
+    <script src="js/creative.min.js"></script>
+  <script src="js/custom.js"></script>
+  
+  <script>
+ 
+  
+  // IBMWP1
+  
+  var modal31 = document.getElementById('myModal31');
+   // Get the button that opens the modal
+   var btn31 = document.getElementById("IBMWP1");
+   // Get the <span> element that closes the modal
+   var span31 = document.getElementsByClassName("close31")[0];
+   // When the user clicks the button, open the modal 
+   btn31.onclick = function() {
+       modal31.style.display = "block";
+   }
+   // When the user clicks on <span> (x), close the modal
+   span31.onclick = function() {
+       modal31.style.display = "none";
+
+   } 
+   
+   // IBMWP2
+   
+   var modal32 = document.getElementById('myModal32');
+    // Get the button that opens the modal
+    var btn32 = document.getElementById("IBMWP2");
+    // Get the <span> element that closes the modal
+    var span32 = document.getElementsByClassName("close32")[0];
+    // When the user clicks the button, open the modal 
+    btn32.onclick = function() {
+        modal32.style.display = "block";
+    }
+    // When the user clicks on <span> (x), close the modal
+    span32.onclick = function() {
+        modal32.style.display = "none";
+
+    } 
+    
+   
+    // IBMWP3
+    
+    var modal33 = document.getElementById('myModal33');
+     // Get the button that opens the modal
+     var btn33 = document.getElementById("IBMWP3");
+     // Get the <span> element that closes the modal
+     var span33 = document.getElementsByClassName("close33")[0];
+     // When the user clicks the button, open the modal 
+     btn33.onclick = function() {
+         modal33.style.display = "block";
+     }
+     // When the user clicks on <span> (x), close the modal
+     span33.onclick = function() {
+         modal33.style.display = "none";
+
+     } 
+     
+     // IBMWP4
+     
+     var modal34 = document.getElementById('myModal34');
+      // Get the button that opens the modal
+      var btn34 = document.getElementById("IBMWP4");
+      // Get the <span> element that closes the modal
+      var span34 = document.getElementsByClassName("close34")[0];
+      // When the user clicks the button, open the modal 
+      btn34.onclick = function() {
+          modal34.style.display = "block";
+      }
+      // When the user clicks on <span> (x), close the modal
+      span34.onclick = function() {
+          modal34.style.display = "none";
+
+      } 
+      
+                
+     
+  
+  
+  
+
+// VMWare
+       
+      var modal29 = document.getElementById('myModal29');
+       // Get the button that opens the modal
+       var btn29 = document.getElementById("VMWare123");
+       // Get the <span> element that closes the modal
+       var span29 = document.getElementsByClassName("close29")[0];
+       // When the user clicks the button, open the modal 
+       btn29.onclick = function() {
+           modal29.style.display = "block";
+       }
+       // When the user clicks on <span> (x), close the modal
+       span29.onclick = function() {
+           modal29.style.display = "none";
+
+       } 
+       
+       
+       
+
+       
+    // ServiceNow
+       
+       var modal27 = document.getElementById('myModal27');
+        // Get the button that opens the modal
+        var btn27 = document.getElementById("ServiceNow123");
+        // Get the <span> element that closes the modal
+        var span27 = document.getElementsByClassName("close27")[0];
+        // When the user clicks the button, open the modal 
+        btn27.onclick = function() {
+            modal27.style.display = "block";
+        }
+        // When the user clicks on <span> (x), close the modal
+        span27.onclick = function() {
+            modal27.style.display = "none";
+
+        } 
+
+
+    // IBM Brand
+       
+   //    var modal26 = document.getElementById('myModal26');
+     //   // Get the button that opens the modal
+       // var btn26 = document.getElementById("IBMBrand123");
+       // // Get the <span> element that closes the modal
+       // var span26 = document.getElementsByClassName("close26")[0];
+       // // When the user clicks the button, open the modal 
+       // btn26.onclick = function() {
+         //   modal26.style.display = "block";
+       // }
+       // // When the user clicks on <span> (x), close the modal
+       // span26.onclick = function() {
+         //   modal26.style.display = "none";
+
+       // } 
+
+
+
+
+
+
+ // IBMOil
+        
+       var modal25 = document.getElementById('myModal25');
+        // Get the button that opens the modal
+        var btn25 = document.getElementById("IBMOil123");
+        // Get the <span> element that closes the modal
+        var span25 = document.getElementsByClassName("close25")[0];
+        // When the user clicks the button, open the modal 
+        btn25.onclick = function() {
+            modal25.style.display = "block";
+        }
+        // When the user clicks on <span> (x), close the modal
+        span25.onclick = function() {
+            modal25.style.display = "none";
+
+        } 
+        
+        
+        
+ // IBMEnergy
+        
+       var modal24 = document.getElementById('myModal24');
+        // Get the button that opens the modal
+        var btn24 = document.getElementById("IBMEnergy123");
+        // Get the <span> element that closes the modal
+        var span24 = document.getElementsByClassName("close24")[0];
+        // When the user clicks the button, open the modal 
+        btn24.onclick = function() {
+            modal24.style.display = "block";
+        }
+        // When the user clicks on <span> (x), close the modal
+        span24.onclick = function() {
+            modal24.style.display = "none";
+
+        } 
+        
+ 
+                    
+     // IBMWood
+        
+        var modal28 = document.getElementById('myModal28');
+         // Get the button that opens the modal
+         var btn28 = document.getElementById("IBMWood");
+         // Get the <span> element that closes the modal
+         var span28 = document.getElementsByClassName("close28")[0];
+         // When the user clicks the button, open the modal 
+         btn28.onclick = function() {
+             modal28.style.display = "block";
+         }
+         // When the user clicks on <span> (x), close the modal
+         span28.onclick = function() {
+             modal28.style.display = "none";
+
+         }         
+         
+                
+        
+       
+
+            //FindOutMore
+   //  var modal21 = document.getElementById('myModal21');
+       // Get the button that opens the modal
+     //  var btn21 = document.getElementById("FindOutMore");
+       // Get the <span> element that closes the modal
+      // var span21 = document.getElementsByClassName("close21")[0];
+       // When the user clicks the button, open the modal 
+       //var vdo2=document.getElementById("resVideo");
+       //var vdo2=document.getElementById("videoFindOut");
+      // btn21.onclick = function() {
+        //   modal21.style.display = "block";
+      // }
+       // When the user clicks on <span> (x), close the modal
+      // span21.onclick = function() {
+         //alert(vdo1.id);
+           //vdo2.pause;
+        //   modal21.style.display = "none";
+      // }
+
+
+       //FMpoint
+       var modal2 = document.getElementById('myModal2');
+       // Get the button that opens the modal
+       var btn2 = document.getElementById("FMpoint");
+       // Get the <span> element that closes the modal
+       var span2 = document.getElementsByClassName("close")[0];
+       // When the user clicks the button, open the modal 
+       //var vdo2=document.getElementById("resVideo");
+       btn2.onclick = function() {
+           modal2.style.display = "block";
+       }
+       // When the user clicks on <span> (x), close the modal
+       span2.onclick = function() {
+         //alert(vdo1.id);
+           //vdo1.pause;
+           modal2.style.display = "none";
+       }
+       
+      //FutureTech
+      var modal3 = document.getElementById('myModal3');
+       // Get the button that opens the modal
+       var btn3 = document.getElementById("FutureTech");
+       // Get the <span> element that closes the modal
+       var span3 = document.getElementsByClassName("close3")[0];
+       // When the user clicks the button, open the modal 
+       //var vdo2=document.getElementById("resVideo");
+       btn3.onclick = function() {
+           modal3.style.display = "block";
+       }
+       // When the user clicks on <span> (x), close the modal
+       span3.onclick = function() {
+           modal3.style.display = "none";
+           //vdo.pause;
+       }
+//Maximo
+var modal4 = document.getElementById('myModal4');
+       // Get the button that opens the modal
+       var btn4 = document.getElementById("Maximo");
+       // Get the <span> element that closes the modal
+       var span4 = document.getElementsByClassName("close4")[0];
+       // When the user clicks the button, open the modal 
+       //var vdo2=document.getElementById("resVideo");
+       btn4.onclick = function() {
+           modal4.style.display = "block";
+       }
+       // When the user clicks on <span> (x), close the modal
+       span4.onclick = function() {
+           modal4.style.display = "none";
+           //vdo.pause;
+       }
+
+//Cognitive
+var modal5 = document.getElementById('myModal5');
+       // Get the button that opens the modal
+       var btn5 = document.getElementById("Cognitive");
+       // Get the <span> element that closes the modal
+       var span5 = document.getElementsByClassName("close5")[0];
+       // When the user clicks the button, open the modal 
+       //var vdo2=document.getElementById("resVideo");
+       btn5.onclick = function() {
+           modal5.style.display = "block";
+       }
+       // When the user clicks on <span> (x), close the modal
+       span5.onclick = function() {
+           modal5.style.display = "none";
+           //vdo.pause;
+       }
+
+//VMWare
+      var modal6 = document.getElementById('myModal6');
+       // Get the button that opens the modal
+       var btn6 = document.getElementById("VMWare");
+       // Get the <span> element that closes the modal
+       var span6 = document.getElementsByClassName("close6")[0];
+       // When the user clicks the button, open the modal 
+       //var vdo2=document.getElementById("resVideo");
+       btn6.onclick = function() {
+           modal6.style.display = "block";
+       }
+       // When the user clicks on <span> (x), close the modal
+       span6.onclick = function() {
+           modal6.style.display = "none";
+           //vdo.pause;
+       }
+  //Connected FM
+  var modal7 = document.getElementById('myModal7');
+       // Get the button that opens the modal
+       var btn7 = document.getElementById("ConnectedFM");
+       // Get the <span> element that closes the modal
+       var span7 = document.getElementsByClassName("close7")[0];
+       // When the user clicks the button, open the modal 
+       //var vdo2=document.getElementById("resVideo");
+       btn7.onclick = function() {
+           modal7.style.display = "block";
+       }
+       // When the user clicks on <span> (x), close the modal
+       span7.onclick = function() {
+           modal7.style.display = "none";
+           //vdo.pause;
+       }
+     </script>
+   
+   <script> 
+    var myVideo = document.getElementById("video1"); 
+    
+    function playPause() { 
+      //alert(myVideo.id);
+            myVideo.load(); 
+    } 
+    
+    </script>
+    <script>
+      var vdoFindOut = document.getElementById("videoFindOut");
+    function playPauseFindOuteMore(){
+      vdoFindOut.load();
+    }
+    </script>
+ <script>
+ $('#myCarousel').carousel({
+	  interval: 1000
+	})
+
+	$('.carousel .item').each(function(){
+	  var next = $(this).next();
+	  if (!next.length) {
+	    next = $(this).siblings(':first');
+	  }
+	  next.children(':first-child').clone().appendTo($(this));
+	  
+	  if (next.next().length>0) {
+	    next.next().children(':first-child').clone().appendTo($(this));
+	  }
+	  else {
+	  	$(this).siblings(':first').children(':first-child').clone().appendTo($(this));
+	  }
+	});
+  </script>
+
+
+  </body>
+<!--
+	<footer id="footer" role="contentinfo" style="padding: 0;">
+      <table>
+        <tr>
+          <td>
+          <div class="container">
+        <div class="row">
+          <div class="col-lg-12 text-center">
+              <div class="section-heading connect" >Best viewed in Mozilla Firefox</div><div class="section-heading connect" style="font-size: smaller;" >&copy; IBM and Seadrill Confidential</div>
+          </div>
+        </div>
+      </div>
+    </td>
+    </tr>
+    </table>
+    </footer>
+-->
+<footer id="footer" role="contentinfo">
+
+      <div class="container">
+    <div class="row">
+      <div class="col-lg-12 text-center">
+          <div class="section-heading connect" >Best viewed in Mozilla Firefox</div><div class="section-heading connect" style="font-size: smaller;" >&copy; IBM and Seadrill Confidential</div>
+      </div>
+    </div>
+  </div>
+
+</footer>
+<style>
+.navbar{
+position:fixed !important;
+}
+#mainNav .navbar-nav > li.nav-item > a.nav-link, #mainNav .navbar-nav > li.nav-item > a.nav-link:focus {
+
+    font-size: 14px !important;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+header.masthead h1 {
+    font-size: 64px;
+}
+pre {
+    background: none !important;
+    border: none !important;
+    border-radius: 4px;
+    color: #333;
+    display: block;
+    font-size: 13px;
+    line-height: 1.42857;
+    margin: 0 0 10px;
+    overflow-wrap: break-word;
+    padding: 9.5px;
+    word-break: break-all;
+}
+h5{
+font-size:18px;
+}
+#OverallApproach{
+background-color:#24376F;
+color:#fff;
+}
+#TeamResources{
+padding-bottom: 500px !important;
+background-color:#004f6f;
+font-family: Calibri;
+font-size: 18px;
+}
+#TeamResources .scrollup {
+left:0;
+position:relative;
+bottom:-500px;
+}
+#TeamResources .scrollup a.scrollup {
+left:0;
+position:relative;
+bottom:0px;
+}
+#TeamResources .fa-angle-down::before {
+    bottom: 0;
+    content: "";
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: 8px;
+}
+.w3-center {
+    text-align: center !important;
+}
+#footer {
+    text-align: center !important;
+    background-color:#004C99 !important;
+    color:#fff;
+    padding-top:5px;
+    padding-bottom:5px;
+}
+#WhyIBM{
+color: #fff !important;
+padding-bottom:150px;
+}
+#TeamResources{
+color: #fff !important;
+}
+.carousel-control .glyphicon-chevron-left, .carousel-control .icon-prev {
+    margin-left: -100px;
+    top:140px;
+}
+.carousel-control .glyphicon-chevron-right, .carousel-control .icon-next {
+    margin-right: -100px;
+    top:140px;
+}
+#TeamResources img {
+    border-radius: 50%;
+    /* height:500px; */
+    width:500px;
+}
+#TeamResources p {
+    text-align:center;
+}
+.col-md-offset-3 {
+    margin-left: 20%;
+}
+.col-md-6 {
+    width: 60%;
+    max-width:60%;
+}
+.linkedin{
+border-radius:0;
+}
+.carousel-inner > .item > a > img, .carousel-inner > .item > img, .img-responsive, .thumbnail a > img, .thumbnail > img {
+margin-bottom:30px;
+}
+.navbar-nav {
+    padding-left: 100px;
+}
+</style>
+<!-- <script>
+$( "#understanding_video" ).click(function() {
+	  alert("clicked");
+	  $("#understanding_video").preload = "auto";
+	  new_video.setAttribute('autostart','false');
+	});
+</script> -->
+ <script>
+
+	 $( "#understanding_video" ).click(function() {
+		  /* alert("clicked"); */
+		  document.getElementById('understanding_video').setAttribute('poster','none');
+		  /* $("#understanding_video").preload = "auto"; */
+		  $("#understanding_video").get(0).play();
+		  $("#understanding_video").prop("controls",true); 
+
+		  $('#understanding_video').unbind('click');
+		});
+</script> 
 </html>
