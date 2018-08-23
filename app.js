@@ -13,8 +13,19 @@ var express = require('express');
 var cfenv = require('cfenv');
 
 // create a new express server
-var app = express();
+/*var app = express();*/
+const app = require('express')()
+const basicAuth = require('express-basic-auth')
 
+app.use(basicAuth({
+    users: { 'IBM': 'IBM12345' },
+challenge: true
+}))
+function getUnauthorizedResponse(req) {
+    return req.auth
+        ? ('Credentials ' + req.auth.user + ':' + req.auth.password + ' rejected')
+        : 'No credentials provided'
+}
 // serve the files out of ./public as our main files
 app.use(express.static(__dirname + '/public'));
 
