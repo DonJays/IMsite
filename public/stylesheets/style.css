@@ -93,6 +93,69 @@ pre {
   height: 100%;
 }
 
+.social {
+	padding: 0;
+	margin: 0;
+	display: inline-block;
+	position: relative;
+	width: 100%;
+  }
+  .social li {
+	list-style: none;
+	padding: 0;
+	margin: 0;
+	display: inline-block;
+  }
+  .social li a {
+	font-size: 16px;
+	display: table;
+	width: 40px;
+	height: 40px;
+	margin: 0 4px;
+  }
+  .social li a i {
+	display: table-cell;
+	vertical-align: middle;
+  }
+  .social li a:hover, .social li a:active, .social li a:focus {
+	text-decoration: none;
+	border-bottom: none;
+  }
+  .social li a.social-box {
+	background: #3973BF;
+	color: #fff;
+	}
+	.social li a.social-circle {
+	background: #3973BF;
+	color: #fff;
+	-webkit-border-radius: 50%;
+	-moz-border-radius: 50%;
+	-ms-border-radius: 50%;
+	border-radius: 50%;
+  }
+  .social li a:hover {
+	background: #393e46 !important;
+  }
+  .social.social-box a {
+	background: #3973BF;
+	color: #fff;
+  }
+  .social.social-circle a {
+	background: #3973BF;
+	color: #fff;
+	-webkit-border-radius: 50%;
+	-moz-border-radius: 50%;
+	-ms-border-radius: 50%;
+	border-radius: 50%;
+  }
+  .social.social-circlegreen a {
+		background: rgb(0,131,169);
+		color: #fff;
+		-webkit-border-radius: 50%;
+		-moz-border-radius: 50%;
+		-ms-border-radius: 50%;
+		border-radius: 50%;
+		}
 
 /* temp code to be checked*/
 /*

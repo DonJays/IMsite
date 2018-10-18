@@ -15,12 +15,12 @@ var cfenv = require('cfenv');
 // create a new express server
 /*var app = express();*/
 const app = require('express')()
-const basicAuth = require('express-basic-auth')
+//Jay -const basicAuth = require('express-basic-auth')
 
-app.use(basicAuth({
-    users: { 'IBM': 'IBM12345' },
-challenge: true
-}))
+//Jay app.use(basicAuth({
+//Jay     users: { '': '' },
+//Jay challenge: true
+//Jay }))
 function getUnauthorizedResponse(req) {
     return req.auth
         ? ('Credentials ' + req.auth.user + ':' + req.auth.password + ' rejected')

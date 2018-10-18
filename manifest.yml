@@ -1,6 +1,6 @@
 applications:
   - path: .
-    name: roadshowmicrosite
+    name: Web-Host
     environment_json: {}
     memory: 256M
     instances: 1

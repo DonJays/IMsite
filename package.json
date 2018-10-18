@@ -5,13 +5,7 @@
 	"scripts": {
 		"start": "node app.js"
 	},
-	"dependencies": {
-		"express": "4.15.x",
-		"cfenv": "1.0.x",
-		"express-basic-auth": "^1.1.0"
-			
-	},
-	"repository": {},
+		"repository": {},
 	"engines": {
 		"node": "6.x"
 	} 
