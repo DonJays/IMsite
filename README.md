@@ -11,4 +11,4 @@ This application demonstrates a simple, reusable Node.js web application based o
 1. Access the running app in a browser at <http://localhost:6001>
 
 [Install Node.js]: https://nodejs.org/en/download/
-# MarriottIBMSite
+# MI Site
