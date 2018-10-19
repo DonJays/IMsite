@@ -2,7 +2,7 @@
 
 This application demonstrates a simple, reusable Node.js web application based on the Express framework.
 
-## Run the app locally
+## Run the app locally  ----------
 
 1. [Install Node.js][]
 1. cd into this project's root directory
